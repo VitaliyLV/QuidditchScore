@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quidditch Score</title>
 </head>
 <body>
-    <h1><span id="p1Score">0</span> to <span id="p2Score">0</span></h1>
+    <h2>Quidditch Score</h2>
+    <h4>Keeping track of the magic</h4>
+    <h1><span id="leftScore">0</span> to <span id="rightScore">0</span></h1>
+    <div>
+        <button id="leftAdd">Left Team scored</button>
+        <button id="rightAdd">Right Team scored</button>
+    </div>
+    <div>
+        <button id="leftCatch">Left Team caught Snitch</button>
+        <button id="rightCatch">Right Team caught Snitch</button>
+    </div>
+    <button id="undoLast">Undo Last Action</button>
+
+    <script src="./app.js"></script>
 </body>
 </html>

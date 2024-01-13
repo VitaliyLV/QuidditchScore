@@ -1,1 +1,1 @@
-A simple html + JS project for keeping Quiddich score
+A simple HTML + Vanilla JavaScript project for keeping score of Quidditch game.
