@@ -4,10 +4,41 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
     text-align: center;
+    align-items: center;
   }
 .winScore{
-    color: rgb(31, 215, 18);
+    color: rgb(192, 41, 18);
 }
 .loseScore{
-    color: red;
+    color: rgb(193, 138, 138);
+}
+button {
+    background-color: #90c6e0;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+  }
+.buttonMain {border-radius: 10px;}
+.buttonAux {border-radius: 15px}
+.leftColor{
+    background-color: #935227;
+}
+.rightColor{
+    background-color: #017036;
+}
+.newGameColor{
+    background-color: #02839B;
+}
+select{
+    background-color: #CFCAEA;
+}
+.fcImage{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
 }

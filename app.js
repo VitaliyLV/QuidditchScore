@@ -3,10 +3,16 @@ let rightScoreNum = 0;
 const goalScore = 10;
 const catchCore = 150;
 let leftTeamCatch = false;
+const faculties = ['Gryffindor', 'Ravenclaw', 'Hufflepuff', 'Slytherin'];
 
 const leftScore = document.querySelector('#leftScore');
 const rightScore = document.querySelector('#rightScore');
 const congratsMess = document.querySelector('#congrats');
+const leftSelect = document.querySelector('#leftSelect');
+const rightSelect = document.querySelector('#rightSelect');
+const leftImg = document.querySelector('#leftImg');
+const rightImg = document.querySelector('#rightImg');
+
 const leftAddButton = document.querySelector("#leftAdd");
 const rightAddButton = document.querySelector("#rightAdd");
 const leftCatchButton = document.querySelector('#leftCatch');
@@ -28,7 +34,23 @@ startNewButton.addEventListener('click', startNewGame);
 startNewButton.addEventListener('click', removeAllScores);
 
 removeAllScores();
+addOptions();
 
+leftSelect.addEventListener('change', leftSelectChanged);
+rightSelect.addEventListener('change', rightSelectChanged);
+
+function leftSelectChanged(){
+    if(leftSelect.selectedIndex !== rightSelect.selectedIndex){
+        const imgUrl = faculties[leftSelect.selectedIndex];
+        leftImg.src = `images/${imgUrl}.jpg`;
+    }
+}
+function rightSelectChanged(){
+    if(leftSelect.selectedIndex !== rightSelect.selectedIndex){
+        const imgUrl = faculties[rightSelect.selectedIndex];
+        rightImg.src = `images/${imgUrl}.jpg`;
+    }
+}
 function addLeftScore(){
     leftScoreNum += goalScore;
     leftScore.textContent=leftScoreNum;
@@ -87,4 +109,26 @@ function displayCongrats(){
         leftScore.classList.add('loseScore');
     }
     congratsMess.textContent = mess;
+}
+
+function addOptions(){
+    let i = 0;
+    for(let ft of faculties){
+        const opt = createOption(i);
+        leftSelect.appendChild(opt);
+
+        const opt2 = createOption(i);
+        rightSelect.appendChild(opt2);
+        i++;
+    }
+    leftSelect.selectedIndex=0;
+    rightSelect.selectedIndex=3;
+    leftSelectChanged();
+    rightSelectChanged();
+}
+function createOption(i){
+    const opt = document.createElement('option');
+    opt.value = faculties[i];
+    opt.textContent = faculties[i];
+    return opt;
 }
