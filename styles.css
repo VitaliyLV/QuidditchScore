@@ -7,10 +7,10 @@ body {
     align-items: center;
   }
 .winScore{
-    color: rgb(192, 41, 18);
+    color: rgb(19, 8, 6);
 }
 .loseScore{
-    color: rgb(193, 138, 138);
+    color: rgb(102, 94, 94);
 }
 button {
     background-color: #90c6e0;
@@ -59,7 +59,7 @@ select {
     background-color: #283093;
 }
 .color2{
-    background-color: #EEC357;
+    background-color: #e3b43f;
 }
 .color3{
     background-color: #017036;

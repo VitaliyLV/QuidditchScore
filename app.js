@@ -4,8 +4,8 @@ const leftTeam = {
     score: document.querySelector('#leftScore'),
     select: document.querySelector('#leftSelect'),
     img: document.querySelector('#leftImg'),
-    addButton: document.querySelector("#leftAdd"),
-    catchButton: document.querySelector('#leftCatch'),
+    addButton: document.querySelector('#leftAdd'),
+    catchButton: document.querySelector('#leftCatch')
 }
 const rightTeam ={
     scoreNum: 0,
@@ -13,8 +13,8 @@ const rightTeam ={
     score: document.querySelector('#rightScore'),
     select: document.querySelector('#rightSelect'),
     img: document.querySelector('#rightImg'),
-    addButton: document.querySelector("#rightAdd"),
-    catchButton: document.querySelector('#rightCatch'),
+    addButton: document.querySelector('#rightAdd'),
+    catchButton: document.querySelector('#rightCatch')
 }
 
 const goalScore = 10;
@@ -80,19 +80,19 @@ function startNewGame(){
    changeButtonsState(true);
 }
 function changeButtonsState(enabled){
-    leftTeam.addButton.disabled = !enabled;
-    rightTeam.addButton.disabled = !enabled;
-    leftTeam.catchButton.disabled = !enabled;
-    rightTeam.catchButton.disabled = !enabled;
+    for(let team of [leftTeam, rightTeam]){
+        team.addButton.disabled = !enabled;
+        team.select.disabled = !enabled;
+        team.catchButton.disabled = !enabled;
+    }
 }
 function removeAllScores(){
-    leftTeam.scoreNum=0;
-    leftTeam.score.textContent = leftTeam.scoreNum;
-    rightTeam.scoreNum = 0;
-    rightTeam.score.textContent = rightTeam.scoreNum;
+    for(let team of [leftTeam, rightTeam]){
+        team.scoreNum=0;
+        team.score.textContent = team.scoreNum;
+        team.score.classList.remove('winScore', 'loseScore');
+    }
     congratsMess.textContent = '';
-    leftTeam.score.classList.remove('winScore', 'loseScore');
-    rightTeam.score.classList.remove('loseScore', 'winScore');
 }
 function displayCongrats(){
     let mess = 'team wins!';
@@ -117,11 +117,10 @@ function displayCongrats(){
 function addOptions(){
     let i = 0;
     for(let ft of faculties){
-        const opt = createOption(i);
-        leftTeam.select.appendChild(opt);
-
-        const opt2 = createOption(i);
-        rightTeam.select.appendChild(opt2);
+        for(let team of [leftTeam, rightTeam]){
+            const opt = createOption(i);
+            team.select.appendChild(opt);
+        }
         i++;
     }
     leftTeam.imgNum = 0;
