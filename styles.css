@@ -34,11 +34,27 @@ button {
 .newGameColor{
     background-color: #02839B;
 }
-select{
-    background-color: #CFCAEA;
-}
+
 .fcImage{
     width: 100px;
     height: 100px;
     margin: 5px;
+    border: #E3C8E9 solid 2px;
+}
+select {
+    width:150px;
+    height: 30px;
+    border:1px solid red;
+    font-size: 14px;
+    color: white;
+    -webkit-border-top-right-radius: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -moz-border-radius-topright: 15px;
+    -moz-border-radius-bottomright: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding:2px;
+}
+.score{
+    font-size: 40px;
 }

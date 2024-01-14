@@ -5,6 +5,9 @@ const catchCore = 150;
 let leftTeamCatch = false;
 const faculties = ['Gryffindor', 'Ravenclaw', 'Hufflepuff', 'Slytherin'];
 
+let leftImgNum = 0;
+let rightImgNum = 0;
+
 const leftScore = document.querySelector('#leftScore');
 const rightScore = document.querySelector('#rightScore');
 const congratsMess = document.querySelector('#congrats');
@@ -43,12 +46,20 @@ function leftSelectChanged(){
     if(leftSelect.selectedIndex !== rightSelect.selectedIndex){
         const imgUrl = faculties[leftSelect.selectedIndex];
         leftImg.src = `images/${imgUrl}.jpg`;
+        leftImgNum = leftSelect.selectedIndex;
+    }
+    else{
+        leftSelect.selectedIndex = leftImgNum;
     }
 }
 function rightSelectChanged(){
     if(leftSelect.selectedIndex !== rightSelect.selectedIndex){
         const imgUrl = faculties[rightSelect.selectedIndex];
         rightImg.src = `images/${imgUrl}.jpg`;
+        rightImgNum = rightSelect.selectedIndex;
+    }
+    else{
+        rightSelect.selectedIndex = rightImgNum;
     }
 }
 function addLeftScore(){
@@ -121,8 +132,10 @@ function addOptions(){
         rightSelect.appendChild(opt2);
         i++;
     }
-    leftSelect.selectedIndex=0;
-    rightSelect.selectedIndex=3;
+    leftImgNum = 0;
+    leftSelect.selectedIndex = 0;
+    rightImgNum = 3;
+    rightSelect.selectedIndex = 3;
     leftSelectChanged();
     rightSelectChanged();
 }
