@@ -47,10 +47,20 @@ function selectChanged(team, oposeTeam){
     if(team.select.selectedIndex !== oposeTeam.select.selectedIndex){
         const imgUrl = faculties[team.select.selectedIndex];
         team.img.src = `images/${imgUrl}.jpg`;
+        changeColor(team, team.imgNum, team.select.selectedIndex);
         team.imgNum = team.select.selectedIndex;
     }
     else{
         team.select.selectedIndex = team.imgNum;
+        alert('Cannot select same teams!');
+    }
+}
+function changeColor(team, oldNumber, newNumber){
+    const oldColor = `color${oldNumber}`;
+    const newColor = `color${newNumber}`;
+    for(let elm of [team.select, team.addButton, team.catchButton]){
+        elm.classList.remove(oldColor);
+        elm.classList.add(newColor);
     }
 }
 

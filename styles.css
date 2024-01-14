@@ -25,12 +25,6 @@ button {
   }
 .buttonMain {border-radius: 10px;}
 .buttonAux {border-radius: 15px}
-.leftColor{
-    background-color: #935227;
-}
-.rightColor{
-    background-color: #017036;
-}
 .newGameColor{
     background-color: #02839B;
 }
@@ -57,4 +51,16 @@ select {
 }
 .score{
     font-size: 40px;
+}
+.color0{
+    background-color: #A01E16;
+}
+.color1{
+    background-color: #283093;
+}
+.color2{
+    background-color: #EEC357;
+}
+.color3{
+    background-color: #017036;
 }
