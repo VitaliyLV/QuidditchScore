@@ -64,3 +64,11 @@ select {
 .color3{
     background-color: #017036;
 }
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #d8d6d6;
+  }
