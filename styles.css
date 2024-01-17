@@ -23,22 +23,28 @@ button {
     font-size: 14px;
     margin: 4px 2px;
   }
+button:active{
+    color: #589fdd;
+}
+button:disabled{
+    opacity: 70%;
+    color: white;
+}
 .buttonMain {border-radius: 10px;}
-.buttonAux {border-radius: 15px}
+.buttonAux {border-radius: 18px}
+
 .newGameColor{
     background-color: #02839B;
 }
 
 .fcImage{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     margin: 5px;
-    border: #E3C8E9 solid 2px;
 }
 select {
     width:150px;
     height: 30px;
-    border:1px solid red;
     font-size: 14px;
     color: white;
     -webkit-border-top-right-radius: 15px;

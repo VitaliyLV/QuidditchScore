@@ -46,7 +46,7 @@ rightTeam.select.addEventListener('change', () => selectChanged(rightTeam, leftT
 function selectChanged(team, oposeTeam){
     if(team.select.selectedIndex !== oposeTeam.select.selectedIndex){
         const imgUrl = faculties[team.select.selectedIndex];
-        team.img.src = `images/${imgUrl}.jpg`;
+        team.img.src = `images/${imgUrl}.png`;
         changeColor(team, team.imgNum, team.select.selectedIndex);
         team.imgNum = team.select.selectedIndex;
     }
