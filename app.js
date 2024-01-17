@@ -48,6 +48,7 @@ function selectChanged(team, oposeTeam){
         const imgUrl = faculties[team.select.selectedIndex];
         team.img.src = `images/${imgUrl}.png`;
         changeColor(team, team.imgNum, team.select.selectedIndex);
+        changeTitles(team, team.select.selectedIndex);
         team.imgNum = team.select.selectedIndex;
     }
     else{
@@ -61,6 +62,16 @@ function changeColor(team, oldNumber, newNumber){
     for(let elm of [team.select, team.addButton, team.catchButton]){
         elm.classList.remove(oldColor);
         elm.classList.add(newColor);
+    }
+}
+function changeTitles(team, newNumber){
+    const newTitle = faculties[newNumber];
+    if(team === leftTeam)
+        var elems = document.querySelectorAll(".leftTeam");
+    else
+        var elems = document.querySelectorAll(".rightTeam");
+    for(let elm of elems){
+        elm.textContent = newTitle;
     }
 }
 
@@ -102,12 +113,14 @@ function displayCongrats(){
         leftWon = true;
     }
     if(leftTeam.scoreNum > rightTeam.scoreNum || leftWon){
-        mess = "Left "+ mess;
+        const teamName = faculties[leftTeam.select.selectedIndex];
+        mess = `${teamName} ${mess}`;
         leftTeam.score.classList.add('winScore');
         rightTeam.score.classList.add('loseScore');
     }
     else{
-        mess = "Right " + mess;
+        const teamName = faculties[rightTeam.select.selectedIndex];
+        mess = `${teamName} ${mess}`;
         rightTeam.score.classList.add('winScore');
         leftTeam.score.classList.add('loseScore');
     }

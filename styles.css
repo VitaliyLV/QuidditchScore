@@ -14,7 +14,6 @@ body {
 }
 button {
     background-color: #90c6e0;
-    border: none;
     color: white;
     padding: 15px;
     text-align: center;
@@ -33,8 +32,9 @@ button:disabled{
 .buttonMain {border-radius: 10px;}
 .buttonAux {border-radius: 18px}
 
-.newGameColor{
-    background-color: #02839B;
+.newGameBtn{
+    background-color: #283093;
+    border-radius: 10px 10px 30px 30px;
 }
 
 .fcImage{
@@ -43,16 +43,11 @@ button:disabled{
     margin: 5px;
 }
 select {
-    width:150px;
+    width: 150px;
     height: 30px;
     font-size: 14px;
     color: white;
-    -webkit-border-top-right-radius: 15px;
-    -webkit-border-bottom-right-radius: 15px;
-    -moz-border-radius-topright: 15px;
-    -moz-border-radius-bottomright: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 15px;
     padding:2px;
 }
 .score{
@@ -62,7 +57,7 @@ select {
     background-color: #A01E16;
 }
 .color1{
-    background-color: #283093;
+    background-color: #0297BD;
 }
 .color2{
     background-color: #e3b43f;
@@ -75,6 +70,8 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    text-align: left;
-    color: #64698d;
+    text-align: center;
+    color: #e3e3e3;
+    background-color: #b6b3b3;
+    
   }
