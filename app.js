@@ -26,15 +26,15 @@ const startNewButton = document.querySelector('#newGame');
 
 leftTeam.addButton.addEventListener('click', () => addScore(leftTeam));
 leftTeam.catchButton.addEventListener('click', () => catchScore(leftTeam));
-leftTeam.catchButton.addEventListener('click', endTheGame);
-leftTeam.catchButton.addEventListener('click', displayCongrats);
+leftTeam.catchButton.addEventListener('click', () => changeButtonsState(false));
+leftTeam.catchButton.addEventListener('click', showWinner);
 
 rightTeam.addButton.addEventListener('click', () => addScore(rightTeam));
 rightTeam.catchButton.addEventListener('click', () => catchScore(rightTeam));
-rightTeam.catchButton.addEventListener('click', endTheGame);
-rightTeam.catchButton.addEventListener('click', displayCongrats);
+rightTeam.catchButton.addEventListener('click', () => changeButtonsState(false));
+rightTeam.catchButton.addEventListener('click', showWinner);
 
-startNewButton.addEventListener('click', startNewGame);
+startNewButton.addEventListener('click', () => changeButtonsState(true));
 startNewButton.addEventListener('click', removeAllScores);
 
 removeAllScores();
@@ -84,12 +84,6 @@ function catchScore(team){
     team.score.textContent = team.scoreNum;
     leftTeamCatch = true;
 }
-function endTheGame(){
-    changeButtonsState(false);
-}
-function startNewGame(){
-   changeButtonsState(true);
-}
 function changeButtonsState(enabled){
     for(let team of [leftTeam, rightTeam]){
         team.addButton.disabled = !enabled;
@@ -102,10 +96,12 @@ function removeAllScores(){
         team.scoreNum=0;
         team.score.textContent = team.scoreNum;
         team.score.classList.remove('winScore', 'loseScore');
+        leftTeam.img.classList.remove('imageLost', 'imageWon');
+        rightTeam.img.classList.remove('imageWon', 'imageLost');
     }
     congratsMess.textContent = '';
 }
-function displayCongrats(){
+function showWinner(){
     let mess = 'team wins!';
     let leftWon = false;
     if(leftTeam.scoreNum === rightTeam.scoreNum && leftTeamCatch){
@@ -117,12 +113,16 @@ function displayCongrats(){
         mess = `${teamName} ${mess}`;
         leftTeam.score.classList.add('winScore');
         rightTeam.score.classList.add('loseScore');
+        leftTeam.img.classList.add('imageWon');
+        rightTeam.img.classList.add('imageLost');
     }
     else{
         const teamName = faculties[rightTeam.select.selectedIndex];
         mess = `${teamName} ${mess}`;
         rightTeam.score.classList.add('winScore');
         leftTeam.score.classList.add('loseScore');
+        leftTeam.img.classList.add('imageLost');
+        rightTeam.img.classList.add('imageWon');
     }
     congratsMess.textContent = mess;
 }

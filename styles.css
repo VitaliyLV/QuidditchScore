@@ -1,8 +1,7 @@
 body {
     background-image: url('images/background.jpeg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
     text-align: center;
     align-items: center;
   }
@@ -21,6 +20,7 @@ button {
     display: inline-block;
     font-size: 14px;
     margin: 4px 2px;
+    transition: opacity 0.5s;
   }
 button:active{
     color: #589fdd;
@@ -41,7 +41,16 @@ button:disabled{
     width: 120px;
     height: 120px;
     margin: 5px;
+    transition: all 0.5s;
 }
+.imageWon{
+    transform: scale(1.1);
+}
+.imageLost{
+    transform: scale(0.9);
+    opacity: 70%;
+}
+
 select {
     width: 150px;
     height: 30px;
@@ -51,7 +60,8 @@ select {
     padding:2px;
 }
 .score{
-    font-size: 40px;
+    font-size: 45px;
+    margin: 15px;
 }
 .color0{
     background-color: #A01E16;
@@ -65,13 +75,12 @@ select {
 .color3{
     background-color: #017036;
 }
-footer {
+footer small{
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
     color: #e3e3e3;
-    background-color: #b6b3b3;
-    
+    background-color: #b6b3b3ab;
   }
