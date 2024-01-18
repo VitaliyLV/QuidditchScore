@@ -4,6 +4,8 @@ body {
     background-size: cover;
     text-align: center;
     align-items: center;
+    font-family: 'Yusei Magic', sans-serif;
+    letter-spacing: 0.1rem;
   }
 .winScore{
     color: rgb(19, 8, 6);
@@ -14,13 +16,15 @@ body {
 button {
     background-color: #90c6e0;
     color: white;
-    padding: 15px;
+    padding: 0.6rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px;
+    font-size: 0.9rem;
     margin: 4px 2px;
     transition: opacity 0.5s;
+    font-family: 'Yusei Magic', sans-serif;
+    letter-spacing: 0.08rem;
   }
 button:active{
     color: #589fdd;
@@ -34,13 +38,13 @@ button:disabled{
 
 .newGameBtn{
     background-color: #283093;
-    border-radius: 10px 10px 30px 30px;
+    border-radius: 0.5rem 0.5rem 1.2rem 1.2rem;
 }
 
 .fcImage{
-    width: 120px;
-    height: 120px;
-    margin: 5px;
+    width: 8rem;
+    height: 8rem;
+    margin: 0.2rem;
     transition: all 0.5s;
 }
 .imageWon{
@@ -52,16 +56,16 @@ button:disabled{
 }
 
 select {
-    width: 150px;
-    height: 30px;
-    font-size: 14px;
+    font-size: 0.8rem;
+    letter-spacing: 0.07rem;
     color: white;
-    border-radius: 15px;
-    padding:2px;
+    border-radius: 1em;
+    padding: 0.3em 0.5em;
+    font-family: 'Yusei Magic', sans-serif;
 }
 .score{
-    font-size: 45px;
-    margin: 15px;
+    font-size: 2.5rem;
+    margin: 1rem;
 }
 .color0{
     background-color: #A01E16;
@@ -70,7 +74,7 @@ select {
     background-color: #0297BD;
 }
 .color2{
-    background-color: #e3b43f;
+    background-color: #c9a039;
 }
 .color3{
     background-color: #017036;
