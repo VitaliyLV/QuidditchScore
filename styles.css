@@ -1,114 +1,120 @@
 body {
-    background-image: url('images/background.jpeg');
-    background-repeat: repeat;
-    background-size: cover;
-    text-align: center;
-    align-items: center;
-    font-family: 'Yusei Magic', sans-serif;
-    letter-spacing: 0.1rem;
-  }
- .winScore{
-    color: rgb(19, 8, 6);
- }
- .loseScore{
-    color: rgb(102, 94, 94);
- }
- button {
-    background-color: #90c6e0;
-    color: white;
-    padding: 0.6rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 0.9rem;
-    margin: 4px 2px;
-    transition: opacity 0.5s;
-    font-family: 'Yusei Magic', sans-serif;
-    letter-spacing: 0.08rem;
- }
-button:active{
-    color: #589fdd;
+  background-image: url("images/background.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  text-align: center;
+  align-items: center;
+  font-family: "Yusei Magic", sans-serif;
+  letter-spacing: 0.1rem;
 }
-button:disabled{
-    opacity: 70%;
-    color: white;
+.winScore {
+  color: rgb(19, 8, 6);
 }
-.buttonMain {border-radius: 10px;}
-.buttonAux {border-radius: 18px}
+.loseScore {
+  color: rgb(102, 94, 94);
+}
+button {
+  background-color: #90c6e0;
+  color: white;
+  padding: 0.6rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.9rem;
+  margin: 4px 2px;
+  transition: opacity 0.5s;
+  font-family: "Yusei Magic", sans-serif;
+  letter-spacing: 0.08rem;
+}
+button:active {
+  color: #589fdd;
+}
+button:disabled {
+  opacity: 70%;
+  color: white;
+}
+.buttonMain {
+  border-radius: 10px;
+}
+.buttonAux {
+  border-radius: 18px;
+}
 
-.newGameBtn{
-    background-color: #283093;
-    border-radius: 0.5rem 0.5rem 1.2rem 1.2rem;
+.newGameBtn {
+  background-color: #283093;
+  border-radius: 0.5rem 0.5rem 1.2rem 1.2rem;
 }
 
-.fcImage{
-    width: 8rem;
-    height: 8rem;
-    margin: 0.2rem;
-    transition: all 0.5s;
+.fcImage {
+  width: 8rem;
+  height: 8rem;
+  margin: 0.2rem;
+  transition: all 0.5s;
 }
-.imageWon{
-    transform: scale(1.1);
+.imageWon {
+  transform: scale(1.1);
 }
-.imageLost{
-    transform: scale(0.9);
-    opacity: 70%;
+.imageLost {
+  transform: scale(0.9);
+  opacity: 70%;
 }
 
 select {
-    font-size: 0.8rem;
-    letter-spacing: 0.07rem;
-    color: white;
-    border-radius: 1em;
-    padding: 0.3em 0.5em;
-    font-family: 'Yusei Magic', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.07rem;
+  color: white;
+  border-radius: 1em;
+  padding: 0.3em 0.5em;
+  font-family: "Yusei Magic", sans-serif;
 }
-.score{
-    font-size: 2.5rem;
-    margin: 1rem;
+.score {
+  font-size: 2.5rem;
+  margin: 1rem;
 }
-.color0{
-    background-color: #A01E16;
+.color0 {
+  background-color: #a01e16;
 }
-.color1{
-    background-color: #0297BD;
+.color1 {
+  background-color: #0297bd;
 }
-.color2{
-    background-color: #c9a039;
+.color2 {
+  background-color: #c9a039;
 }
-.color3{
-    background-color: #017036;
+.color3 {
+  background-color: #017036;
 }
-footer small{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    color: #e3e3e3;
-    background-color: #b6b3b3ab;
-  }
+footer small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #e3e3e3;
+  background-color: #b6b3b3ab;
+}
 @media (max-width: 680px) {
-    body, .winScore, .loseScore{
-        color: white;
-    }
-    button{
-        font-size: 0.7rem;
-        letter-spacing: 0.05rem;
-        padding: 0.3rem;
-        margin: 2px 1px;
-    }
-    select {
-        font-size: 0.6rem;
-        letter-spacing: 0.05rem;
-        padding: 0.1em 0.2em;
-    }
+  body,
+  .winScore,
+  .loseScore {
+    color: white;
+  }
+  button {
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    padding: 0.3rem;
+    margin: 2px 1px;
+  }
+  select {
+    font-size: 0.6rem;
+    letter-spacing: 0.05rem;
+    padding: 0.1em 0.2em;
+  }
 }
 @media (max-width: 520px) {
-    body div{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
-    }
+  body div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+  }
 }
