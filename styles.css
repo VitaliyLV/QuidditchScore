@@ -46,8 +46,8 @@ button:disabled {
 }
 
 .fcImage {
-  width: 8rem;
-  height: 8rem;
+  width: 120px;
+  height: 120px;
   margin: 0.2rem;
   transition: all 0.5s;
 }
